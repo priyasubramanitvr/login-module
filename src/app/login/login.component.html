@@ -7,8 +7,10 @@
   <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
 
     <mat-form-field>
-        <mat-icon >account_circle</mat-icon>
+      
+        <br>
       <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+      <mat-icon >account_circle</mat-icon>
       <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
     </mat-form-field><br>
 
@@ -25,8 +27,8 @@
     <mat-card-actions>
     <button mat-raised-button color="accent" type="submit">Login</button>
     <p>
-      <span class=" ">No account?
-        <a href="/signup">Createone</a></span></p>
+      <span class=" "><b>No account?</b>
+        <button mat-button routerLink="/signup" class="divider">Createone</button></span></p>
         </mat-card-actions>
   </form>
   
